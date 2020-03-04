@@ -54,5 +54,12 @@ class CuratorTest < Minitest::Test
   def test_it_has_artists
     assert_equal [], @curator.artists
   end
-  
+
+  def test_it_adds_artists
+    @curator.add_artist(@artist_1)
+    @curator.add_artist(@artist_2)
+
+    assert_equal [@artist_1, @artist_2], @curator.artists
+  end
+
 end
