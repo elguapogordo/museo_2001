@@ -44,6 +44,10 @@ class CuratorTest < Minitest::Test
     assert_equal [], @curator.photographs
   end
 
+  def test_it_adds_photographs
+    @curator.add_photograph(@photo_1)
+    @curator.add_photograph(@photo_2)
 
-
+    assert_equal [@photo_1, @photo_2], @curator.photographs
+  end
 end
