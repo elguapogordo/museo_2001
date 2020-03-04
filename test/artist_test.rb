@@ -27,4 +27,8 @@ class ArtistTest < Minitest::Test
     assert_equal "United States", @artist.country
   end
 
+  def test_it_returns_age_at_death
+    assert_equal 82, @artist.age_at_death
+  end
+
 end
